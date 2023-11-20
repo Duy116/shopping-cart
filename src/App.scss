@@ -1,0 +1,72 @@
+
+.background {
+    background-color: white;
+}
+
+.mg-10 {
+    margin: 10px;
+}
+
+@mixin active($active: false) {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+    @if $active {
+        color: red;
+    }
+}
+
+.link-active {
+    @include active(true);
+}
+
+.link {
+    @include active(false);
+}
+
+.product {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px black;
+    img {
+        object-fit: scale-down;
+    }
+}
+
+.detail {
+    padding: 10px;
+    margin: 10px;
+}
+
+.button {
+    padding: 5px;
+    font-size: 17px;
+    float: right;
+    background-color: transparent;
+    border-radius: 5px;
+    &:hover {
+        background-color: rgb(201, 255, 255);
+    }
+    &:active {
+        background-color: aqua;
+    }
+}
+
+.item {
+    margin: 10px;
+    display: flex;
+    flex: 1;
+    h4 {
+        margin: 10px;
+    }
+}
+
+.total {
+    padding: 10px;
+    margin: 10px;
+    margin-top: 50px;
+    text-align: right;
+}
